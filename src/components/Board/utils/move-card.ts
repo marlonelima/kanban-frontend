@@ -10,18 +10,11 @@ function moveCard(state: Record<string, ColumnType>, drop: DropResult) {
   const originColumn = drop.source.droppableId;
   const destinationColumn = drop.destination.droppableId;
 
-  if (originColumn !== destinationColumn) {
-    newState[destinationColumn].items.splice(drop.destination.index, -1, card);
-    delete newState[originColumn].items[drop.source.index];
-  } else {
-    delete newState[originColumn].items[drop.source.index];
-    newState[destinationColumn].items.splice(drop.destination.index, -1, card);
-  }
-
-  // removing empty spaces in array for bug prevention
-  newState[originColumn].items = newState[originColumn].items.filter((content) => content);
-  newState[destinationColumn].items = newState[destinationColumn]
+  delete newState[originColumn].items[drop.source.index];
+  newState[originColumn].items = newState[originColumn]
     .items.filter((content) => content);
+
+  newState[destinationColumn].items.splice(drop.destination.index, -1, card);
 
   return newState;
 }

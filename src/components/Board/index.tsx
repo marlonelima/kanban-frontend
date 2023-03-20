@@ -11,7 +11,13 @@ function Board({ columns }: Props) {
   return (
     <Columns>
       {React.Children.toArray(
-        Object.values(columns).map((column) => <ColumnContainer key={column.slug} {...column} />),
+        Object.values(columns).map((column) => (
+          <ColumnContainer
+            counter={column.items.length}
+            key={column.slug}
+            {...column}
+          />
+        )),
       )}
     </Columns>
   );

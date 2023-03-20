@@ -22,7 +22,6 @@ const ColumnsList: ColumnsListType = {
       { id: '2', title: 'The Big Bang Theory' },
     ],
   },
-
   done: {
     title: 'Done',
     slug: 'done',
@@ -30,7 +29,6 @@ const ColumnsList: ColumnsListType = {
     items: [
       { id: '3', title: 'Sherlock' },
     ],
-
   },
 };
 

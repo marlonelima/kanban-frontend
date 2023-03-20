@@ -6,6 +6,7 @@ import {
 
 type Props = {
   title: string;
+  counter: number;
   children: any;
 } & ColumnType;
 
@@ -13,7 +14,7 @@ const Column = React.forwardRef<HTMLDivElement, Props>((props, ref) => (
   <Container ref={ref}>
     <Header>
       <Title>{props.title}</Title>
-      <Count color={props.color}>5</Count>
+      <Count color={props.color}>{props.counter}</Count>
     </Header>
     {props.children}
   </Container>

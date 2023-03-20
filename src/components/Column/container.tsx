@@ -4,7 +4,9 @@ import CardContainer from '../Card/container';
 import { ColumnType } from './column.type';
 import { List } from './styles';
 
-function ColumnContainer(props: ColumnType) {
+type Props = ColumnType & { counter: number };
+
+function ColumnContainer(props: Props) {
   const { slug, items } = props;
 
   return (
