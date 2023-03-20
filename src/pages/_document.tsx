@@ -5,6 +5,7 @@ import Document, {
   Main,
   NextScript,
 } from 'next/document';
+import { resetServerContext } from 'react-beautiful-dnd';
 import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
@@ -18,6 +19,9 @@ class MyDocument extends Document {
       });
 
       const initialProps = await Document.getInitialProps(ctx);
+
+      resetServerContext();
+
       return {
         ...initialProps,
         styles: (
