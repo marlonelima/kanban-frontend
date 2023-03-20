@@ -1,4 +1,4 @@
-import { CardType } from '../Card/card.type';
+import { CardType } from '@components/Card/card.type';
 
 export type ColumnType = {
   title: string,

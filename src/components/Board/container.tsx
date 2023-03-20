@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import { ColumnsListType } from '@components/Column/column.type';
-
-import Board from '.';
-import moveCard from './utils/move-card';
+import ColumnContainer from '@components/Column/container';
+import { Columns } from '@components/Column/styles';
+import moveCard from '@components/Board/utils/move-card';
 
 const ColumnsList: ColumnsListType = {
   to_do: {
@@ -37,7 +37,17 @@ function BoardContainer() {
 
   return (
     <DragDropContext onDragEnd={(drop) => setColumns((state) => moveCard(state, drop))}>
-      <Board columns={columns} />
+      <Columns>
+        {React.Children.toArray(
+          Object.values(columns).map((column) => (
+            <ColumnContainer
+              counter={column.items.length}
+              key={column.slug}
+              {...column}
+            />
+          )),
+        )}
+      </Columns>
     </DragDropContext>
   );
 }

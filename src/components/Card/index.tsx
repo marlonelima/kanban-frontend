@@ -1,5 +1,5 @@
-import { CardType } from './card.type';
-import { Container, Title } from './styles';
+import { Container, Title } from '@components/Card/styles';
+import { CardType } from '@components/Card/card.type';
 
 function Card({ title }: CardType) {
   return (
