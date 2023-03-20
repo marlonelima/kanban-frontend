@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>My board</title>
+        <title>My tasks</title>
       </Head>
       <main>
         <Header />

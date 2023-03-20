@@ -6,6 +6,7 @@
     "react/jsx-filename-extension": "off",
     "react/jsx-props-no-spreading": "off",
     "linebreak-style": 0,
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "react/jsx-no-constructed-context-values": "off"
   }
 }

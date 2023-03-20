@@ -1,9 +1,10 @@
-import { Container, Title } from '@components/Header/styles';
+import { Container, CreateButton, Title } from '@components/Header/styles';
 
 function Header() {
   return (
     <Container>
-      <Title>Task Board</Title>
+      <Title>My tasks</Title>
+      <CreateButton>Create</CreateButton>
     </Container>
   );
 }

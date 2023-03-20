@@ -1,9 +1,13 @@
 import { Container, Title } from '@components/Card/styles';
-import { CardType } from '@components/Card/card.type';
 
-function Card({ title }: CardType) {
+type Props = {
+  title: string,
+  done: boolean
+}
+
+function Card({ title, done }: Props) {
   return (
-    <Container>
+    <Container done={done}>
       <Title>{title}</Title>
     </Container>
   );

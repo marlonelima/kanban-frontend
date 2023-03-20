@@ -3,7 +3,8 @@ import { CardType } from '@components/Card/card.type';
 import Card from '@components/Card/.';
 
 type Props = {
-  index: number
+  index: number,
+  done: boolean
 } & CardType;
 
 function CardContainer({ id, index, ...data }: Props) {
@@ -16,7 +17,7 @@ function CardContainer({ id, index, ...data }: Props) {
           {...provided.dragHandleProps}
           style={{ ...provided.draggableProps.style, paddingBottom: '0.5rem' }}
         >
-          <Card id={id} {...data} />
+          <Card {...data} />
         </div>
       )}
     </Draggable>

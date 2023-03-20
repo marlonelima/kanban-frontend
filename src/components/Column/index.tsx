@@ -10,14 +10,18 @@ type Props = {
   children: any;
 } & ColumnType;
 
-const Column = React.forwardRef<HTMLDivElement, Props>((props, ref) => (
-  <Container ref={ref}>
-    <Header>
-      <Title>{props.title}</Title>
-      <Count color={props.color}>{props.counter}</Count>
-    </Header>
-    {props.children}
-  </Container>
-));
+function Column({
+  title, color, counter, children,
+}: Props) {
+  return (
+    <Container>
+      <Header>
+        <Title>{title}</Title>
+        <Count color={color}>{counter}</Count>
+      </Header>
+      {children}
+    </Container>
+  );
+}
 
 export default Column;

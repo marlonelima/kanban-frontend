@@ -19,7 +19,7 @@ function ColumnContainer(props: Props) {
             {...provided.droppableProps}
           >
             {items.map((item, index) => (
-              <CardContainer key={item.id + slug} index={index} {...item} />
+              <CardContainer key={item.id + slug} index={index} done={slug === 'done'} {...item} />
             ))}
             {provided.placeholder}
           </List>

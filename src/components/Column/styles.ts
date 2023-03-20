@@ -10,6 +10,7 @@ export const Columns = styled.div`
   flex: 1;
 
   padding: 0 2rem;
+  max-width: 1240px;
 `;
 
 export const Container = styled.div`
