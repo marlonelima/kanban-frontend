@@ -1,17 +1,17 @@
 import React from 'react';
-import { ColumnType } from '@components/Column/column.type';
+import { ColumnsListType } from '@components/Column/column.type';
 import { Columns } from '../Column/styles';
 import ColumnContainer from '../Column/container';
 
 type Props = {
-  columns: ColumnType[]
+  columns: ColumnsListType;
 }
 
 function Board({ columns }: Props) {
   return (
     <Columns>
       {React.Children.toArray(
-        columns.map((column) => <ColumnContainer key={column.slug} {...column} />),
+        Object.values(columns).map((column) => <ColumnContainer key={column.slug} {...column} />),
       )}
     </Columns>
   );

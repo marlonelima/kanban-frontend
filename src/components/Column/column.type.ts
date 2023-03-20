@@ -6,3 +6,5 @@ export type ColumnType = {
   color: string,
   items: CardType[],
 };
+
+export type ColumnsListType = Record<string, ColumnType>;
