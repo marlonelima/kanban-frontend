@@ -4,6 +4,8 @@
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "linebreak-style": 0,
+    "import/extensions": "off"
   }
 }
