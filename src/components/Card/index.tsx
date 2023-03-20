@@ -1,9 +1,10 @@
+import { CardType } from './card.type';
 import { Container, Title } from './styles';
 
-function Card() {
+function Card({ title }: CardType) {
   return (
     <Container>
-      <Title>card</Title>
+      <Title>{title}</Title>
     </Container>
   );
 }
