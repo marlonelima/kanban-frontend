@@ -1,4 +1,6 @@
-import { Container, Title } from '@components/Card/styles';
+import {
+  Categories, Category, Container, Title,
+} from '@components/Card/styles';
 
 type Props = {
   title: string,
@@ -9,6 +11,9 @@ function Card({ title, done }: Props) {
   return (
     <Container done={done}>
       <Title>{title}</Title>
+      <Categories>
+        <Category>Series</Category>
+      </Categories>
     </Container>
   );
 }

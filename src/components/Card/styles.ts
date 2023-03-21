@@ -20,3 +20,18 @@ export const Title = styled.span`
   font-weight: 700;
   font-size: 0.8rem;
 `;
+
+export const Categories = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const Category = styled.button`
+  color: #fff;
+  font-size: 0.6rem;
+  padding: 0.3rem 0.6rem;
+  background: #cf3a69;
+  margin-top: 0.7rem;
+  border-radius: 0.4rem;
+  border:  none;
+`;

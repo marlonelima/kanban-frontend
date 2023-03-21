@@ -1,10 +1,16 @@
-import { Container, CreateButton, Title } from '@components/Header/styles';
+import { Container, Title } from '@components/Header/styles';
+import Button from '../Button';
 
-function Header() {
+type Props = {
+  title: string,
+  onClick: () => void;
+}
+
+function Header({ title, onClick }: Props) {
   return (
     <Container>
-      <Title>My tasks</Title>
-      <CreateButton>Create</CreateButton>
+      <Title>{title}</Title>
+      <Button onClick={onClick} text="Create" action="primary" />
     </Container>
   );
 }
