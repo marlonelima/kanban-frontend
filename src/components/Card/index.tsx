@@ -1,6 +1,6 @@
 import {
   Categories, Category, Container, Title,
-} from '@components/Card/styles';
+} from './styles';
 
 type Props = {
   title: string,

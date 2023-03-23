@@ -1,5 +1,5 @@
 import 'react-quill/dist/quill.snow.css';
-import { useAppContext } from '@/context';
+import { useAppContext } from '../../../context';
 import EditCardForm from '.';
 import { EditProps } from './edit.type';
 

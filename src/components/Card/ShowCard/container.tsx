@@ -1,6 +1,6 @@
 import 'react-quill/dist/quill.snow.css';
-import { useAppContext } from '@/context';
 import { useState } from 'react';
+import { useAppContext } from '../../../context';
 import ShowCard from '.';
 import EditCardForm from '../EditCardForm';
 

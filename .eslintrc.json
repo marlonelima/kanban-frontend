@@ -8,6 +8,8 @@
     "linebreak-style": 0,
     "import/extensions": "off",
     "react/jsx-no-constructed-context-values": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "react/function-component-definition": "off",
+    "import/no-extraneous-dependencies": "off"
   }
 }

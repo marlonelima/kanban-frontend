@@ -1,7 +1,7 @@
 import { Draggable } from 'react-beautiful-dnd';
-import { CardType } from '@components/Card/card.type';
-import Card from '@components/Card/.';
-import { useAppContext } from '@/context';
+import { CardType } from './card.type';
+import Card from '.';
+import { useAppContext } from '../../context';
 
 type Props = {
   index: number,

@@ -1,4 +1,4 @@
-import { StyledButton } from '@components/Button/styles';
+import { StyledButton } from './styles';
 
 type Props = {
   text: string,

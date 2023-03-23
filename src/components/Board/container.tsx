@@ -1,9 +1,9 @@
 import React from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
-import ColumnContainer from '@components/Column/container';
-import { Columns } from '@components/Column/styles';
-import moveCard from '@components/Board/utils/move-card';
-import { useAppContext } from '@/context';
+import ColumnContainer from '../Column/container';
+import { Columns } from '../Column/styles';
+import moveCard from './utils/move-card';
+import { useAppContext } from '../../context';
 
 function BoardContainer() {
   const { setBoard, board } = useAppContext();

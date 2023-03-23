@@ -1,8 +1,8 @@
 import { Droppable } from 'react-beautiful-dnd';
-import CardContainer from '@components/Card/container';
-import { ColumnType } from '@components/Column/column.type';
-import { List } from '@components/Column/styles';
-import Column from '@components/Column';
+import Column from '.';
+import { ColumnType } from './column.type';
+import { List } from './styles';
+import CardContainer from '../Card/container';
 
 type Props = ColumnType & { counter: number };
 

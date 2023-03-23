@@ -1,6 +1,6 @@
 import { ReactNode, useRef } from 'react';
 import { useOnClickOutside } from 'usehooks-ts';
-import { useAppContext } from '@/context';
+import { useAppContext } from '../../context';
 import { Container, Wrapper } from './styles';
 
 type Props = {

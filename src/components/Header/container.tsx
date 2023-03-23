@@ -1,4 +1,4 @@
-import { useAppContext } from '@/context';
+import { useAppContext } from '../../context';
 import Header from './index';
 
 function HeaderContainer() {

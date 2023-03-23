@@ -1,8 +1,8 @@
 import React from 'react';
-import { ColumnType } from '@components/Column/column.type';
+import { ColumnType } from './column.type';
 import {
   Container, Count, Header, Title,
-} from '@components/Column/styles';
+} from './styles';
 
 type Props = {
   title: string;
