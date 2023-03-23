@@ -1,8 +1,9 @@
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import 'react-quill/dist/quill.snow.css';
-import Button from '../Button';
-import Spinner from '../Spinner';
+import Button from '../../Button';
+import Spinner from '../../Spinner';
+import { EditProps } from './edit.type';
 
 import {
   Container, InputGroup, Label, TitleInput,
@@ -28,16 +29,18 @@ const ReactQuill = dynamic(() => import('react-quill'), {
 type Props = {
   onCancel: ()=>void;
   onSubmit: ()=>void;
-}
+} & EditProps
 
-function CreateCardForm({ onCancel, onSubmit }: Props) {
-  const [value, setValue] = useState('');
+function EditCardForm({
+  onCancel, onSubmit, title, description,
+}: Props) {
+  const [value, setValue] = useState(description || '');
 
   return (
     <Container>
       <InputGroup>
         <Label htmlFor="title-input">Title</Label>
-        <TitleInput id="title-input" type="text" />
+        <TitleInput id="title-input" type="text" value={title || ''} />
       </InputGroup>
       <Label>Description</Label>
       {typeof window !== 'undefined' ? (
@@ -65,4 +68,4 @@ function CreateCardForm({ onCancel, onSubmit }: Props) {
   );
 }
 
-export default CreateCardForm;
+export default EditCardForm;

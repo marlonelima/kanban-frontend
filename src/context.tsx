@@ -10,8 +10,8 @@ type Props = {
 type ContextType = {
   board: ColumnsListType,
   setBoard: Dispatch<SetStateAction<ColumnsListType>>,
-  isModalOpened: boolean,
-  toggleModal: () => void;
+  modalOpenedId: string | null,
+  setModalCardId: Dispatch<SetStateAction<string | null>>;
 }
 
 const ColumnsList: ColumnsListType = {
@@ -45,13 +45,11 @@ const Context = createContext({} as ContextType);
 
 function AppContext({ children }: Props) {
   const [board, setBoard] = useState<ColumnsListType>(ColumnsList);
-  const [isModalOpened, setIsModalOpened] = useState(false);
-
-  const toggleModal = () => setIsModalOpened((state) => !state);
+  const [modalOpenedId, setModalCardId] = useState<string | null>(null);
 
   return (
     <Context.Provider value={{
-      board, setBoard, isModalOpened, toggleModal,
+      board, setBoard, modalOpenedId, setModalCardId,
     }}
     >
       {children}

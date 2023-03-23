@@ -2,7 +2,7 @@ import { StyledButton } from '@components/Button/styles';
 
 type Props = {
   text: string,
-  action: 'primary' | 'secondary',
+  action: 'primary' | 'secondary' | 'caution',
   onClick: () => void
 };
 

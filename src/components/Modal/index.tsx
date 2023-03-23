@@ -9,13 +9,13 @@ type Props = {
 
 function Modal({ children }: Props) {
   const ref = useRef(null);
-  const { toggleModal } = useAppContext();
+  const { setModalCardId } = useAppContext();
 
-  useOnClickOutside(ref, toggleModal);
+  useOnClickOutside(ref, () => setModalCardId(null));
 
   return (
-    <Container ref={ref}>
-      <Wrapper>{children}</Wrapper>
+    <Container>
+      <Wrapper ref={ref}>{children}</Wrapper>
     </Container>
   );
 }

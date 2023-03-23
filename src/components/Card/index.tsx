@@ -5,11 +5,12 @@ import {
 type Props = {
   title: string,
   done: boolean
+  onClick: () => void
 }
 
-function Card({ title, done }: Props) {
+function Card({ title, done, onClick }: Props) {
   return (
-    <Container done={done}>
+    <Container done={done} onClick={onClick}>
       <Title>{title}</Title>
       <Categories>
         <Category>Series</Category>

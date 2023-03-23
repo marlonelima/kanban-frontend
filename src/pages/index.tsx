@@ -5,10 +5,11 @@ import BoardContainer from '@/components/Board/container';
 import Modal from '@/components/Modal';
 import { useAppContext } from '@/context';
 import HeaderContainer from '@/components/Header/container';
-import CreateCardFormContainer from '@/components/CreateCardForm/container';
+import EditCardFormContainer from '@/components/Card/EditCardForm/container';
+import ShowCardContainer from '@/components/Card/ShowCard/container';
 
 export default function Home() {
-  const { isModalOpened } = useAppContext();
+  const { modalOpenedId } = useAppContext();
 
   return (
     <>
@@ -18,7 +19,11 @@ export default function Home() {
       <main>
         <HeaderContainer />
         <BoardContainer />
-        {isModalOpened && <Modal><CreateCardFormContainer /></Modal>}
+        {modalOpenedId !== null && (
+          <Modal>
+            {modalOpenedId !== '0' ? <ShowCardContainer /> : <EditCardFormContainer />}
+          </Modal>
+        )}
       </main>
     </>
   );

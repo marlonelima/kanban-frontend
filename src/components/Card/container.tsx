@@ -1,6 +1,7 @@
 import { Draggable } from 'react-beautiful-dnd';
 import { CardType } from '@components/Card/card.type';
 import Card from '@components/Card/.';
+import { useAppContext } from '@/context';
 
 type Props = {
   index: number,
@@ -8,6 +9,8 @@ type Props = {
 } & CardType;
 
 function CardContainer({ id, index, ...data }: Props) {
+  const { setModalCardId } = useAppContext();
+
   return (
     <Draggable key={id} draggableId={id} index={index}>
       {(provided) => (
@@ -16,8 +19,9 @@ function CardContainer({ id, index, ...data }: Props) {
           {...provided.draggableProps}
           {...provided.dragHandleProps}
           style={{ ...provided.draggableProps.style, paddingBottom: '0.5rem' }}
+
         >
-          <Card {...data} />
+          <Card onClick={() => setModalCardId(id)} {...data} />
         </div>
       )}
     </Draggable>
